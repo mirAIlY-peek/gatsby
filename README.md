@@ -1,7 +1,7 @@
 # Gatsby Testing Blog
 
 Простой блог на Gatsby с постами в Markdown.  
-Развёрнут на Netlify: https://gatsby-testing-work.netlify.app](https://miras-gatsby.netlify.app
+🔗 Сайт: https://miras-gatsby.netlify.app/
 
 ## Используемое:
 - GatsbyJS
