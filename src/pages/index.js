@@ -100,7 +100,7 @@ const links = [
     color: "#BC027F",
   },
   {
-    text: "Conceptual Guides",
+    text: "Miras GUIDES",
     url: "https://www.gatsbyjs.com/docs/conceptual/",
     description:
       "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
