@@ -1,49 +1,67 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { Link } from "gatsby";
 
 const pageStyles = {
-  color: "#232129",
-  padding: "96px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "100vh",
+  backgroundColor: "#f8f8f8",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
+};
+
+const cardStyles = {
+  background: "white",
+  padding: "48px 64px",
+  borderRadius: "12px",
+  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+  textAlign: "center",
+  maxWidth: "400px",
+};
+
+const emojiStyles = {
+  fontSize: "64px",
+  marginBottom: "16px",
+};
+
 const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+  marginBottom: "8px",
+  fontSize: "28px",
+  color: "#333",
+};
 
 const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+  color: "#666",
+  marginBottom: "24px",
+};
+
+const buttonStyles = {
+  padding: "12px 24px",
+  backgroundColor: "black",
+  color: "white",
+  textDecoration: "none",
+  borderRadius: "8px",
+  fontWeight: "bold",
+};
+
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+      <main style={pageStyles}>
+        <div style={cardStyles}>
+          <div style={emojiStyles}>😕</div>
+          <h1 style={headingStyles}>Упс! Страница не найдена</h1>
+          <p style={paragraphStyles}>
+            Такой страницы нет. Возможно, вы ошиблись в адресе.
+          </p>
+          <Link to="/" style={buttonStyles}>
+            Вернуться на главную
+          </Link>
+        </div>
+      </main>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>404 — Страница не найдена</title>;

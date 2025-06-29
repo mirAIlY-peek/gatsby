@@ -1,0 +1,77 @@
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 2px solid #000;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    border-radius: 8px;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.heroDescription {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.postsSection {
+    margin-top: 2rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #000;
+}
+
+.postsGrid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroDescription {
+        font-size: 1.1rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .postsGrid {
+        gap: 1.5rem;
+    }
+}
