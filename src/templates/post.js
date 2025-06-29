@@ -36,16 +36,16 @@ const PostTemplate = ({ data }) => {
 };
 
 export const query = graphql`
-    query {
-        markdownRemark {
-            id
-            frontmatter {
-                date
-                title
-            }
+    query($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
             html
+            frontmatter {
+                title
+                date
+            }
         }
     }
 `;
+
 
 export default PostTemplate;

@@ -28,19 +28,21 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions;
 
     if (node.internal.type === "MarkdownRemark") {
-        const url = node.frontmatter.title
+        const slug = node.frontmatter.title
             .toLowerCase()
             .replace(/\s+/g, "-")
             .replace(/[^a-z0-9\-]/g, "");
 
         createNodeField({
-            name: "slug",
             node,
-            url: `/${url}`
+            name: "slug",
+            value: `/${slug}`,
         });
     }
 };
+
+
